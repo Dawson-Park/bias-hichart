@@ -1,0 +1,66 @@
+{
+  "name": "acryl-bias-hichart",
+  "version": "0.1.0",
+  "description": "It is a React data visualization library based on hichart and d3.js.",
+  "main": "dist/bundle.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "types": "npm run build:types",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawson-Park/bias-hichart.git"
+  },
+  "keywords": [
+    "react",
+    "d3",
+    "hichart",
+    "data-visualization"
+  ],
+  "author": {
+    "name": "Dawson Park",
+    "email": "dawson@acryl.ai"
+  },
+  "license": "(MIT OR ISC)",
+  "bugs": {
+    "url": "https://github.com/Dawson-Park/bias-hichart/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/Dawson-Park/bias-hichart#readme",
+  "dependencies": {
+    "d3": "^7.6.1",
+    "highcharts": "^10.2.1",
+    "styled-components": "^5.3.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/d3": "^7.4.0",
+    "@types/d3-selection": "^3.0.3",
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  }
+}
