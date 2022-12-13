@@ -16,7 +16,6 @@
     "url": "git+https://github.com/Dawson-Park/bias-hichart.git"
   },
   "keywords": [
-    "react",
     "d3",
     "hichart",
     "data-visualization"
