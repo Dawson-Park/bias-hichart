@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 // import Random from "./random";
 // import { link } from "d3";
 
-type TConfig = {
+export type NetworkConfig = {
 	target: string,
 	input: number,
 	hidden: number,
@@ -13,7 +13,7 @@ type TConfig = {
 	option: { colorFix: boolean }
 }
 
-export default function MakeFfnnChart(config:TConfig) {
+export default function MakeFfnnChart(config:NetworkConfig) {
 	let ADJUST = 42; // 간격의 크기
 	let RADIUS = 10; // 원의 크기
 	let svg:any;
@@ -25,7 +25,10 @@ export default function MakeFfnnChart(config:TConfig) {
 	 * svg의 설정값을 return하는 함수
 	 */
 	function setUp() {
-		svg = d3.select(`#${config.target}`);
+		const div = d3.select(`#${config.target}`)
+		              .style('background-color', '#fff');
+		div.selectAll('*').remove();
+		svg = div.append("svg");
 		svg.selectAll('*').remove();
 
 		// get d3 Color Scheme
@@ -217,7 +220,12 @@ export default function MakeFfnnChart(config:TConfig) {
 		// Create Link Line
 		tag.link = tag.link.data(tag.graph.links);
 		tag.link.exit().remove();
-		tag.link = tag.link.enter().append("line").attr("class", "ffnn-link").merge(tag.link);
+		tag.link = tag.link.enter()
+		              .append("line")
+		              .attr("class", "ffnn-link")
+		              .attr("stroke", "#999")
+		              .attr("stroke-width", "2px")
+		              .merge(tag.link);
 
 		// Create Node Circle
 		tag.node = tag.node.data(tag.graph.nodes);
@@ -225,6 +233,8 @@ export default function MakeFfnnChart(config:TConfig) {
 		tag.node.enter().append("circle")
 		   .attr("class", "ffnn-node")
 		   .attr("r", RADIUS)
+		   .attr("stroke", "#fff")
+		   .attr("stroke-width", "2px")
 		   .attr("fill", (d:any) => { return config.option.colorFix ? tag.color[d.type] : tag.color(d.group);  } )
 		   .attr("cx",   (d:any) => __getCx(d.group) )
 		   .attr("cy",   (d:any) => __getCy(d.sort, d.maxCount, d.groupCount) )
@@ -236,6 +246,8 @@ export default function MakeFfnnChart(config:TConfig) {
 			tag.accent.exit().remove();
 			tag.accent = tag.accent.enter().append("line")
 			                .attr("class", "ffnn-accent")
+			                .attr("stroke", "#666")
+			                .attr("stroke-width", "6px")
 			                .merge(tag.accent);
 		}
 
