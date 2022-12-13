@@ -1,5 +1,5 @@
 # Bias-Hichart
-Highcharts와 d3.js 기반 React 라이브러리 입니다.  
+Highcharts와 d3.js 기반 데이터시각화 라이브러리 입니다.  
 git-pages: https://github.com/Dawson-Park/bias-hichart
 
 ## Installation
