@@ -1,6 +1,6 @@
 {
   "name": "acryl-bias-hichart",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "It is a data visualization library based on hichart and d3.js.",
   "main": "dist/bundle.js",
   "types": "dist/types/index.d.ts",
