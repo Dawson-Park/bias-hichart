@@ -9,7 +9,7 @@ npm i acryl-bias-hichart
 
 ## usage
 ### Bar Chart
-![image](#)
+![1bar](https://user-images.githubusercontent.com/94957353/207228105-257729da-1170-44fa-af6a-1685360a518c.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -47,7 +47,7 @@ new Bar({
 | legend     | `boolean`    | `undefined` |
 
 ### 3d Bar Chart
-![image](#)
+![2bar3d](https://user-images.githubusercontent.com/94957353/207228120-b2630e72-e357-4938-be08-c3fdcc5dbea1.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -85,7 +85,7 @@ new Bar3d({
 | legend     | `boolean`    | `undefined` |
 
 ### Spider Chart
-![image](#)
+![3spider](https://user-images.githubusercontent.com/94957353/207228136-dd8bf5cd-a683-41c4-9e2c-874884da91eb.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -123,7 +123,7 @@ new Spider({
 | legend     | `boolean`    | `undefined` |
 
 ### Polar Chart
-![image](#)
+![4polar](https://user-images.githubusercontent.com/94957353/207228156-b464dadd-4de6-4b19-b351-2ae20bc9dc07.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -161,7 +161,7 @@ new Polar({
 | legend     | `boolean`    | `undefined` |
 
 ### Scatter Chart
-![image](#)
+![5scatter](https://user-images.githubusercontent.com/94957353/207228174-ae88010a-60cc-4a02-a89e-05098f33422a.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -200,7 +200,7 @@ new Scatter({
 | legend     | `boolean`      | `undefined` |
 
 ### Network Chart
-![image](#)
+![6network](https://user-images.githubusercontent.com/94957353/207228191-73f93eb4-c821-452a-8eff-54f864a2f60e.png)
 
 ```javascript
 /* *.js || *.ts */
@@ -228,7 +228,7 @@ new Network({
 | colorSet  | `string[]`                  | `undefined` |
 
 ### Histogram Chart
-![image](#)
+![7histogram](https://user-images.githubusercontent.com/94957353/207228206-1cace5ff-2cc3-46e6-ae10-b7e54706c4b7.png)
 
 ```javascript
 /* *.js || *.ts */
